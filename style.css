@@ -1,0 +1,233 @@
+.Header-container{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.head-svg-item{
+    width: 30px;
+   filter: invert(100%);
+   background-color: rgb(192, 192, 192);
+   padding: 3px;
+   border-radius: 4px;
+
+}
+.head-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    gap: 10px;
+
+}
+.head-mid-items{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.head-right-item{
+        display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.head-user-items{
+        display: flex;
+    text-decoration: none;
+    font-size: medium;
+    align-items: center;
+    gap: 10px;
+    
+}
+.head-search{
+        display: flex;
+    background-color: rgb(153, 151, 151) ;
+    align-items: center;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+.search-bar{
+    width: 400px;
+    height: 40px;
+    border :none  ;
+    border-radius: 8px;
+    
+    
+}
+header{
+    background-color: rgb(22, 22, 22);
+}
+header input{
+    background-color: rgb(153, 151, 151);
+    font-size: large;
+    color: white;
+}
+.head-user-name button{
+    color: orange;
+}
+.user-avata{
+    background-image: url('avatardefault_92824.png');
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+.body-create-post{
+    display: flex;
+     align-items: center;
+    gap: 10px;
+    background-color: rgb(153, 151, 151);
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: space-between;
+
+}
+.post-input{
+    width: 400px;
+    height: 40px;
+    border :2px solid  gray ;
+    border-radius: 8px;
+        background-color: rgb(255, 255, 255);
+
+    
+}
+.body-create-post-button{
+    height: 40px;
+    background-color: orange;
+    font-size: large;
+    cursor: pointer;
+}
+.avatar-post-author{
+    
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.body-post-image{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;   
+    border-radius: 10px;
+}
+.body-post{
+    display: flex;
+    border-radius: 20px;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+.post-container-2{
+    display: flex;
+    justify-content: space-between;
+    gap : 40px;
+    height: 100%;
+    align-items:center;
+
+}
+.body-post-tilte{
+    font-weight: bold;    
+    font-size: larger;
+
+
+}
+.body-post-author{
+    display: flex;
+    
+}
+.interact-items-post{
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+.post-container{
+    background-color: rgb(124, 124, 124);
+    width: 100%;
+     
+}
+.interact-items-post{
+    font-weight:lighter;
+}
+.body-popular-post{
+    padding: 20px;
+    background-color: rgb(124, 124, 124);
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+.username-post-author{
+    color: white;
+    font-weight: bold;
+}
+.body-popular-container{
+    margin-top: 10px;
+}
+.login-button a{
+    text-decoration: none;
+    color: white;
+}
+.signup-button a{ 
+        text-decoration: none;
+    color: white;
+}
+.dropdown-menu-item button{
+    text-decoration: none;
+    color: white;
+    
+}
+.dropdown-menu{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    max-width: 140px;
+    width: 100px;
+    background-color: rgb(122, 122, 122);
+    text-align: center;
+    
+    
+}
+.head-user-name:hover .dropdown-menu{
+    display: block;
+}
+.head-user-name button {
+    background-color: transparent;
+    font-size: larger;
+    border: none;
+}
+.dropdown-menu-item{
+    position: relative;
+    z-index: 1;
+}
+.dropdown-menu-item button{
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.dropdown-menu:hover {
+    background-color: black;
+
+}
+.dropdown-menu-item:hover button{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+
+}
