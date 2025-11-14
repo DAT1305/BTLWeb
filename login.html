@@ -6,14 +6,14 @@
     <title>login</title>
 </head>
 <body>
-    <form action="" id = "login-form">
-        tên đăng nhập :<input type="text" id = "username" placeholder="nhập tên của bạn" required> 
-        mật khẩu : <input type="password" id = "password" placeholder="nhập mật khẩu" required>
+    <form action="login.php" id = "login-form" method = "POST">
+        tên đăng nhập :<input type="text" name = "username" id = "username" placeholder="nhập tên của bạn" required> 
+        mật khẩu : <input type="password" name = "password" id = "password" placeholder="nhập mật khẩu" required>
         <button type = "submit">đăng nhập</button>
 
     </form>
     <div>chưa có tài khoản ? <a href="signup.html"> đăng kí ngay</a></div>
     
 </body>
-<script src="login.js"></script>
+<!-- <script src="login.js"></script> -->
 </html>
