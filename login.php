@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require'database.php';
 
     $username = isset($_POST['username']) ? trim($_POST['username']) : '';
@@ -10,9 +11,15 @@
     $result = $stmt->get_result();
     //lấy ra
     $user = $result->fetch_assoc();
-    if($password == $user['password']){
-        echo ('đăng nhập thành công');
+    if(!$user){
+       echo('đăng nhập thất bại');
+       header("location : login.html");
+    }
+    else{
         
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        header("location: index.php");
     }
 
 

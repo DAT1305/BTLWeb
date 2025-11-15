@@ -1,3 +1,9 @@
+<?php 
+ session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,10 +44,27 @@
             <!-- user item  -->
             <a href="#" class = "head-user-items">
             
-                <!-- <div class = "head-user-avata">
-                    <div class = "user-avata"></div>
-                </div>
-                <div class = "head-user-name">placeholder-name</div> -->
+               <?php if(isset($_SESSION['username'])): ?>
+
+    <div class="head-user-avata">
+        <div class="user-avata"></div>
+    </div>
+
+    <div class="head-user-name">
+        <button><?= $_SESSION['username'] ?></button>
+        <div class="dropdown-menu">
+        <div class="dropdown-menu-item">
+        <button onclick="window.location.href = 'logout.php'">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <?php else: ?>
+
+    <div class="login-button"><a href="login.html">Đăng Nhập</a></div>
+    <div class="signup-button"><a href="signup.html">Đăng kí</a></div>
+
+    <?php endif; ?>
                 
 
             </a>
@@ -81,6 +104,6 @@
     
     
 
-<script src="script.js"></script>    
+<!-- <script src="script.js"></script>     -->
 </body>
 </html>
