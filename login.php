@@ -1,7 +1,6 @@
 <?php 
     session_start();
     require'database.php';
-
     $username = isset($_POST['username']) ? trim($_POST['username']) : '';
     $password = isset($_POST['password']) ? trim($_POST['password']) : '';
     $sql = "SELECT id , username , password  FROM users WHERE username = ?";

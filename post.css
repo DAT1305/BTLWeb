@@ -1,0 +1,126 @@
+
+body{
+
+background-color: gray;
+
+}
+
+.container{
+    
+}
+.bentrong{
+display: flex;
+}
+.user_avata img {
+     width: 100px;
+    
+}
+.user{
+    display: flex;
+    width: 10%;
+    height: 50vh;
+    background-color:white ;
+    border: 2px solid  black;
+  justify-content: center;
+}
+.user-trong{
+  
+    width: 100%;
+}
+.post-image img{
+   width: 300px;
+   
+}
+.post-container{
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    height: 50vh;
+    border: 2px solid  black;
+}
+.user_avata{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid red;
+}
+.username_post{
+    
+    margin-top: 40px;
+    background-color: gray;
+    padding: 10px;
+    border: 2px solid  black;
+    color: white;
+    font-weight: bold;
+
+}
+.date{
+   
+    margin-top: 10px;
+    background-color: gray;
+    padding: 10px;
+    border: 2px solid  black;
+    color: white;
+    font-weight: bold;
+}
+.post_count{
+    
+    background-color: gray;
+    margin-top: 10px;
+padding: 10px;
+    border: 2px solid  black;
+    color: white;
+    font-weight: bold;
+}
+.title-post{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.post-noi-dung{
+    font-weight: bold;
+    font-size: 25px;
+    max-height: 45vh;
+    overflow-y: auto;
+}
+.post_noi_dung{
+    display: flex;
+    gap: 20px;
+}
+.post-image{
+    border-right: 2px solid black;
+
+    border-bottom: 2px solid black;
+}
+.comment-container{
+    text-align: center;
+   
+}
+.need-login a{
+    text-decoration: none;
+    color : rgb(82, 69, 69);
+    font-weight: bold;
+}
+.need-login{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.comment-area textarea{
+    width: 40%;
+    height: 40vh;
+}
+.comment_box{
+    
+}
+
+textarea{
+        border: 2px solid black;
+}
+.submit{
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: larger;
+}

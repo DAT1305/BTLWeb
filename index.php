@@ -1,6 +1,6 @@
 <?php 
  session_start();
-
+require'database.php';
 ?>
 
 
@@ -54,7 +54,7 @@
         <button><?= $_SESSION['username'] ?></button>
         <div class="dropdown-menu">
         <div class="dropdown-menu-item">
-        <button onclick="window.location.href = 'logout.php'">Logout</button>
+        <button onclick="window.location.href = 'logout.php'">đăng xuất</button>
             </div>
         </div>
     </div>
@@ -90,20 +90,65 @@
            
    <div class = "body-post-popular-container">
      <div class = "body-popular-post">
-
+            <!-- xử lí post tại đây  -->
+             <!-- PHP START   -->
+             <?php 
+                $getpost = 'SELECT * FROM `posts` LIMIT 4';
+                $result = $conn->query($getpost);
+                // lấy ra 
+            
+                
+             
+             ?>
+            <!-- PHG END   -->
+         <?php while($post = $result->fetch_assoc()): ?>
+            <?php 
+                $id_user = $post['id_user'];
+                $user = "SELECT username FROM `users` WHERE id = $id_user" ;
+                $result_user = $conn->query($user);
+                $user_get = $result_user->fetch_assoc();
+                
+                ?>
         
-         </div> 
-       
+            <div class="body-post" data-id = " <?= $post['id']?>">
+                <div class="body-post-image" style="background-image: url('<?= $post['post_image']?>')"></div>
+                <div class="post-container">
+                <div class="body-post-tilte"><?= $post['title']?></div>
+                 <div class="body-post-tag"><?= $post['tags']?></div>
+                 <div class="post-container-2">
+                     <div class="body-post-author">
+                      <img class="avatar-post-author" src="avatardefault_92824.png" alt="">
+                      <div class="post-date-name">
+                     <div class="username-post-author"><?=$user_get['username']?></div>
+                   <div class="post-date"><?= $post['post_date']?></div>
+                            </div>
+                    </div>
+                  <div class="interact-items-post">
+                       <div class="body-post-views">số lượt xem: <?= $post['views']?></div>
+                  <div class="body-post-likes">số lượt thích: <?= $post['likes']?></div>
+                  <div class="body-post-comments">số lượt comment: <?= $post['comments']?></div>
+                    </div>
+              </div>
+                </div>
+            </div>
+            
+         
+        <?php endwhile ; ?>
+
+
+
+
                 <!-- -->
         <div class = "body-mid-items">
 
         </div>
         <div class = "body-right-items"></div>
 
-</div> 
+</div>
     
-    
+     </div>
 
 <!-- <script src="script.js"></script>     -->
+ <script src = "post.js"></script>
 </body>
 </html>
