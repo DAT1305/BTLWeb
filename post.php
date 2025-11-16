@@ -44,10 +44,15 @@
 
     </div></div>
         </div>
-
+</div>
 
     </div>
+    <div class="comment-display-container">
+        <?php 
+            require "comments.php"
+        ?>
 
+    </div>
 
 
 
@@ -59,18 +64,18 @@
 
         <?php else : ?>
             
-            <form class="comment-area" method="POST">
+            <form class="comment-area" action="post-comment.php"  method="POST" >
             <div class="comment_text"><h3>điền bình luận của bạn vào đây !</h3></div>
-            
+            <input  class = "post-id" name = "post-id" value = "<?= $id ?>">
             <div class="comment-box-area"><textarea class = "comment_box" name="user_comment" id="user_comment" placeholder="nhập comment của bạn"></textarea></div>
            
-            <button class = "submit" type="submit">bình luận</button>
+            <button class = "submit" type="submit">bình luận </button>
             
         </form>
          
         <?php endif ;?>
     </div>
-</div>
 
+<script></script>
 </body>
 </html>

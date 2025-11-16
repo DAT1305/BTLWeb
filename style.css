@@ -167,9 +167,11 @@ header input{
 }
 .body-popular-post{
     padding: 20px;
-    background-color: rgb(145, 145, 145);
+     background-color: rgb(124, 124, 124);
     margin-top: 20px;
     border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
 
 }
 .username-post-author{
@@ -230,4 +232,21 @@ header input{
     font-weight: bold;
     cursor: pointer;
 
+}
+.body-post-image{
+    border: 2px solid black;
+}
+.body-post-tilte{
+       border-bottom: 2px solid black;
+        color: white;
+}
+.interact-items-post{
+        border: 2px solid black;
+        padding: 5px;
+        border-radius: 7px;
+
+}
+.body-post-tag{
+    font-size:medium;
+    
 }

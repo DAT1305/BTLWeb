@@ -88,8 +88,7 @@ require'database.php';
             </div>
             
            
-   <div class = "body-post-popular-container">
-     <div class = "body-popular-post">
+   
             <!-- xử lí post tại đây  -->
              <!-- PHP START   -->
              <?php 
@@ -109,7 +108,8 @@ require'database.php';
                 $user_get = $result_user->fetch_assoc();
                 
                 ?>
-        
+        <div class = "body-post-popular-container">
+         <div class = "body-popular-post">
             <div class="body-post" data-id = " <?= $post['id']?>">
                 <div class="body-post-image" style="background-image: url('<?= $post['post_image']?>')"></div>
                 <div class="post-container">
@@ -131,7 +131,9 @@ require'database.php';
               </div>
                 </div>
             </div>
-            
+            </div>
+    
+     </div>
          
         <?php endwhile ; ?>
 
@@ -144,9 +146,7 @@ require'database.php';
         </div>
         <div class = "body-right-items"></div>
 
-</div>
-    
-     </div>
+
 
 <!-- <script src="script.js"></script>     -->
  <script src = "post.js"></script>
