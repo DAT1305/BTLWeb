@@ -1,0 +1,61 @@
+.login{
+   
+    width: 20%;
+    height: 48vh;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    background-color: gray;
+}
+.login-name{
+    text-align: center;
+    font-size: larger;
+    
+}
+.login-name-input{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+}
+.login-pass-input{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    
+
+}
+.login-pass{
+    text-align: center;
+    font-size: larger;
+}
+button {
+     display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+
+}
+.signup-button{
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.login-container{
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border: 2px solid black;
+    
+}

@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <form action="register.php" id = "login-form" method="POST">
-        tên đăng nhập :<input type="text" id = "username" name="username"  placeholder="nhập tên của bạn" required> 
-        mật khẩu : <input type="password" id = "password" name="password" placeholder="nhập mật khẩu" required>
-        <button type = "submit">đăng ký</button>
-
+   <div class="login-container">
+        <form class = "login" action="register.php" id = "login-form" method = "POST">
+        <div class="login-trong"><div class="login-name">tên đăng nhập :</div> <input class="login-name-input"  type="text" name = "username" id = "username" placeholder="nhập tên của bạn" required> <br>
+        <div class="login-pass">mật khẩu :</div><input class="login-pass-input" type="password" name = "password" id = "password" placeholder="nhập mật khẩu" required> <br>
+        <button  type = "submit">đăng ký</button>
+    <div class = "signup-button">đã có tài khoản ? <a href="login.html"> đăng nhập </a></div></div>
     </form>
-    <div>đã có tài khoản? <a href="login.html"> đăng nhập</a></div>
+    </div>
     
 </body>
 
