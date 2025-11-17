@@ -139,7 +139,7 @@ container.addEventListener('click', function(e) {
   let postEl = e.target.closest('.body-post');
   if (!postEl) return; 
   let id = postEl.dataset.id;
-  alert('Post id = ' + id);
+  alert('Post id=' + id);
   
 });
 // lắng nghe click vào class 'body-post-popular-container để lấy id end'

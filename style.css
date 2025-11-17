@@ -4,6 +4,8 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    height: 70px;
+    
 }
 .head-svg-item{
     width: 30px;
@@ -11,6 +13,57 @@
    background-color: rgb(192, 192, 192);
    padding: 3px;
    border-radius: 4px;
+
+}
+.head-return svg{
+    color: black;
+    background-color: rgb(141, 141, 141);
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+        border: 2px solid black;
+
+}
+.head-calendar svg {
+    color: black;
+        background-color: rgb(141, 141, 141);
+
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+        border: 2px solid black;
+
+
+}
+.head-noti svg{
+    color: black;
+        background-color: rgb(141, 141, 141);
+
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+        border: 2px solid black;
+
+
+}
+.head-message svg {
+     color: black;
+        background-color: rgb(141, 141, 141);
+        border: 2px solid black;
+
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.head-group svg{
+        color: black;
+        background-color: rgb(141, 141, 141);
+
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+        border: 2px solid black;
+
 
 }
 .head-logo{
@@ -48,6 +101,7 @@
     align-items: center;
     padding: 2px;
     border-radius: 8px;
+    height: 40px;
 }
 
 .search-bar{
@@ -57,9 +111,20 @@
     border-radius: 8px;
     
     
+    
+}
+.head-search svg{
+    color: white;
+    cursor: pointer;
+   
+}
+.head-search{
+    border: 2px solid rgb(255, 255, 255);
+    
 }
 header{
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(113, 113, 113);
+    border-bottom: 2px solid black;
 }
 header input{
     background-color: rgb(153, 151, 151);
@@ -67,7 +132,7 @@ header input{
     color: white;
 }
 .head-user-name button{
-    color: orange;
+    color: rgb(0, 0, 0);
 }
 .user-avata{
     background-image: url('avatardefault_92824.png');
@@ -81,8 +146,8 @@ header input{
 
 .container{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 20px;
+    
     margin: auto;
     width: 80%;
 }
@@ -90,18 +155,21 @@ header input{
     display: flex;
      align-items: center;
     gap: 10px;
-    background-color: rgb(153, 151, 151);
-    padding: 5px;
+    background-color: rgb(196, 230, 236);
+    padding: 15px;
     border-radius: 5px;
     justify-content: space-between;
+    border: 2px solid black;
 
 }
 .post-input{
-    width: 400px;
+    width: 500px;
     height: 40px;
     border :2px solid  gray ;
     border-radius: 8px;
         background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+
 
     
 }
@@ -110,6 +178,7 @@ header input{
     background-color: orange;
     font-size: large;
     cursor: pointer;
+    width: 30%;
 }
 .avatar-post-author{
     
@@ -249,4 +318,41 @@ header input{
 .body-post-tag{
     font-size:medium;
     
+}
+body {
+    background-color: #aff2f2;
+    
+}
+.body-mid-items{
+    width: 20%;
+    background-color: rgb(252, 252, 252);
+    height: 60vh;
+    border: 2px solid black;
+}
+.popular-tag{
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-size: large;
+    font-weight: bold;
+    background-color: #aff2f2;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.login-button{
+    background-color: orange;
+    padding: 10px;
+    border: 2px solid black;
+
+}
+.signup-button{
+    background-color: #ddb2b2;
+    padding: 10px;
+    border: 2px solid black;
+
+}
+.head-user-name{
+    background-color: gray;
+    padding: 5px;
+    border: 2px solid black;
+
 }
