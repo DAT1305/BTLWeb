@@ -2,13 +2,16 @@
 session_start();
     require "database.php";
     $postid = $_GET['post'];
-    $userid = $_SESSION['id'];
-    $like_check = "SELECT * FROM likes WHERE post_id = $postid AND user_id = $userid";
+    $userid = $_SESSION['id'] ?? null;
+    
+    if(!$userid){
+        header('location: login.html');
+    }
+    else{
+
+$like_check = "SELECT * FROM likes WHERE post_id = $postid AND user_id = $userid";
     $like_check_result = $conn->query($like_check);
     $like_get_result = $like_check_result->fetch_assoc();
-    
-
-
     if($like_check_result->num_rows <= 0){
         $insert_like = "INSERT INTO likes(user_id , post_id, islike) VALUES ($userid , $postid , 1) ";
         $prepare_like = $conn->prepare($insert_like);
@@ -34,5 +37,6 @@ session_start();
         }
 
     }
+}
 
 ?>
