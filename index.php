@@ -64,7 +64,9 @@ require'database.php';
                  <div class="body-post-tag"><?= $post['tags']?></div>
                  <div class="post-container-2">
                      <div class="body-post-author">
-                      <img class="avatar-post-author" src="avatardefault_92824.png" alt="">
+                      
+                        <img class="avatar-post-author" src="avatardefault_92824.png" alt="">
+                      
                       <div class="post-date-name">
                      <div class="username-post-author"><?=$user_get['username']?></div>
                    <div class="post-date"><?= $post['post_date']?></div>

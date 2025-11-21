@@ -9,6 +9,7 @@
  $post_user = "SELECT username FROM `users` WHERE id = $id_user ";
  $result_user = $conn->query($post_user);
  $user_get = $result_user->fetch_assoc();
+
 ?>
 <!-- cập nhật views vào sql cho post có id cụ thể khi người dùng truy cập vào -- -->
  <?php 
@@ -28,10 +29,10 @@ $result = $conn->query($update_view);
     <div class = "container">
     <div class = "bentrong">
 
-    <div class = "user">
+    <div class = "user"  data-user ="<?= $id_user?>">
         <div class="user-trong">
             <div class="user_avata"><img src="avatardefault_92824.png" alt=""></div>
-        <div class="username_post"> <?= $user_get['username'] ?></div>
+        <div class="username_post"  > <?= $user_get['username'] ?></div>
         <div class="date">ngày tham gia :</div>
         <div class="post_count">Tổng số bài viết :</div>
         </div>

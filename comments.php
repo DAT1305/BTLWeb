@@ -20,7 +20,7 @@
     <div class = "container">>
         <div  class = "bentrong">
 
-    <div class = "user">
+    <div class = "user-comment">
         <div class="user-trong">
             <div class="user_avata"><img src="avatardefault_92824.png" alt=""></div>
         <div class="username_post"> <?= $get_user['username'] ?></div>
