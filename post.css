@@ -145,3 +145,6 @@ textarea{
     align-items: center;
     
 }
+.double-nut{
+    display: flex;
+}

@@ -374,4 +374,48 @@ body {
     padding-left: 60px;
 
 }
-
+.body-create-post-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid black;
+    width: 80%;
+    
+}
+a{
+    text-decoration: none;
+}
+.double-nut{
+    display: flex;
+    border: 2px solid black;
+    padding: 20px;
+}
+.link-create-post{
+    width: 50%;
+    
+}
+.user-name-avata{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.user-name-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:50px;
+    font-weight: bold;
+}
+.user-interact{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+.follow button{
+    width: 100px;
+    height: 35px;
+}

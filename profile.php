@@ -4,8 +4,10 @@ require 'database.php';
 $userId = $_GET['user'];
 $getAllPostSql = "SELECT * FROM posts WHERE id_user = $userId";
 $queryPost = $conn->query($getAllPostSql);
-
-
+$user_sql = "SELECT * FROM users WHERE id = $userId";
+        $user_query = $conn->query($user_sql);
+        $user_get = $user_query->fetch_assoc();
+$userSession = $_SESSION['id'];
 
 
 ?>
@@ -23,10 +25,35 @@ $queryPost = $conn->query($getAllPostSql);
   
 
 <body>
+     <div class="user-container">
+      <div class="user-name-avata">
+        <div class="user-avata-2"><img width="100px" src="avatardefault_92824.png" alt=""></div>
+      <div class="user-name-profile">
+      <?= $user_get['username'] ?>
+      </div>
+      </div>
+      <div class="user-interact">
+        <div class="follow"><button id= "follow-button" data-followuser = "<?= $user_get['id'] ?>"  onclick = "follow()">
+          <?php 
+            $follow_sql_select = "SELECT * FROM follow WHERE user_id = $userSession AND follow_user_id = $userId  ";
+            $query_follow = $conn->query($follow_sql_select);
+            $get_follow = $query_follow->fetch_assoc();
+            $isFollow = $get_follow['isfollowing']  ?? null;
+
+          ?>
+          <?php if($isFollow == null): ?>
+            <div >theo dõi</div>
+          <?php elseif($isFollow == 1): ?>
+            <div >hủy theo dõi</div>
+          <?php else : ?>
+            theo dõi
+            <?php endif ;?>
+
+        </button></div>
+      </div>
+     </div>
        <?php while($get_post = $queryPost->fetch_assoc()):
-        $user_sql = "SELECT * FROM users WHERE id = $userId";
-        $user_query = $conn->query($user_sql);
-        $user_get = $user_query->fetch_assoc();
+        
      ?>
            <div class = "body-post-popular-container">
          <div class = "body-popular-post">

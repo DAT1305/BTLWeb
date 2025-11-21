@@ -38,3 +38,12 @@ FOREIGN KEY (post_id) REFERENCES posts(id)
     
 
 )
+CREATE TABLE IF NOT EXISTS follow(
+id INT AUTO_INCREMENT PRIMARY KEY,
+user_id INT NOT NULL,
+follow_user_id INT NOT NULL,
+isfollowing INT ,
+FOREIGN KEY (user_id) REFERENCES users(id),
+FOREIGN KEY (follow_user_id) REFERENCES users(id)
+    
+)

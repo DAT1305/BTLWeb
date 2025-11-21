@@ -8,10 +8,14 @@ function click_like(){
 
 document.addEventListener('click', function(e){
     let profileClick = e.target.closest(".user");
+    let profilecomment = e.target.closest(".user-trong");
     if(profileClick){
         
         let userIdProfile = profileClick.dataset.user;
         window.location.href = "profile.php?user=" + userIdProfile;
+    }
+    if(profilecomment){
+        alert('dat');
     }
 }
 );

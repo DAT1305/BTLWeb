@@ -29,19 +29,17 @@ require'database.php';
                     
                     
                     
-                 <form  class = "body-create-post"action="upload.php" method="POST">
-                     <div class="tren-create-post">
-                        <div class = "user-avata"></div>   
-                    <div class = "body-user-input">
-                     <input class = "post-input" type="text" placeholder="bạn đang nghĩ về điều gì ">
+                
                     
-                   
-                </div>
                  
-                <button class = "body-create-post-button" onclick="">Tạo bài viết</button>
-                     </div>
-                <div class="image_upload"><input type="file" name = "file" ></div>
-                 </form>
+            <div class="double-nut">
+                 <a class = "link-create-post" href="postcreate.php">   <div  class="body-create-post-button" ><h3>tạo bài viết</h3></div></a>
+                 <a class = "link-create-post" href="show.php">   <div  class="body-create-post-button" ><h3>xem tất cả </h3></div></a>
+            </div>
+                     
+                
+                
+               
             
             
            
@@ -74,9 +72,7 @@ require'database.php';
                  <div class="body-post-tag"><?= $post['tags']?></div>
                  <div class="post-container-2">
                      <div class="body-post-author">
-                      
-                        <img class="avatar-post-author" src="avatardefault_92824.png" alt="">
-                      
+                      <img class="avatar-post-author" src="avatardefault_92824.png" alt="">
                       <div class="post-date-name">
                      <div class="username-post-author"><?=$user_get['username']?></div>
                    <div class="post-date"><?= $post['post_date']?></div>

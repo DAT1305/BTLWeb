@@ -21,7 +21,7 @@
         <div  class = "bentrong">
 
     <div class = "user-comment">
-        <div class="user-trong">
+        <div id = "user-comment-profile"class="user-trong" data-usercomment = "<?= $get_user['id'] ?>">
             <div class="user_avata"><img src="avatardefault_92824.png" alt=""></div>
         <div class="username_post"> <?= $get_user['username'] ?></div>
         <div class="date">ngày tham gia :</div>
@@ -43,6 +43,15 @@
 
 
     </div>
-    </div
-    
+</div>
+    <script>
+      document.addEventListener('click', function(e){ 
+            let profilecomment = e.target.closest(".user-trong");
+            let userIdComment = profilecomment.dataset.usercomment;
+            if(profilecomment){
+                window.location.href = "profile.php?user=" + userIdComment;
+            }
+
+      });  
+    </script>
 <?php endwhile ; endif ;?>
