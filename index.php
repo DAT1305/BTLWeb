@@ -24,15 +24,25 @@ require'database.php';
 <body>
     <div class = "container">
         <div class = "body-left-items">
-            <div class = "body-create-post">
+           
                 
-                    <div class = "user-avata"></div>
+                    
+                    
+                    
+                 <form  class = "body-create-post"action="upload.php" method="POST">
+                     <div class="tren-create-post">
+                        <div class = "user-avata"></div>   
                     <div class = "body-user-input">
-                        <input class = "post-input" type="text" placeholder="bạn đang nghĩ về điều gì ">
-                    </div>
-                    <button class = "body-create-post-button" onclick="">Tạo bài viết</button>
-                
-            </div>
+                     <input class = "post-input" type="text" placeholder="bạn đang nghĩ về điều gì ">
+                    
+                   
+                </div>
+                 
+                <button class = "body-create-post-button" onclick="">Tạo bài viết</button>
+                     </div>
+                <div class="image_upload"><input type="file" name = "file" ></div>
+                 </form>
+            
             
            
    

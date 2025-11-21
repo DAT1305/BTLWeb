@@ -152,7 +152,7 @@ header input{
     width: 80%;
 }
 .body-create-post{
-    display: flex;
+    /* display: flex; */
      align-items: center;
     gap: 10px;
     background-color: rgb(196, 230, 236);
@@ -160,7 +160,15 @@ header input{
     border-radius: 5px;
     justify-content: space-between;
     border: 2px solid black;
+    
 
+}
+.tren-create-post{
+    display: flex;
+     align-items: center;
+     gap: 10px;
+    background-color: rgb(196, 230, 236);
+   
 }
 .post-input{
     width: 500px;
@@ -354,6 +362,16 @@ body {
     background-color: gray;
     padding: 5px;
     border: 2px solid black;
+
+}
+.image_upload input{
+    background-color: #5cf0ff;
+   padding: 10px;
+    font-size: 15px;
+    border: 2px solid black;
+}
+.image_upload{
+    padding-left: 60px;
 
 }
 
