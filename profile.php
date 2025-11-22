@@ -1,13 +1,13 @@
 <?php 
 session_start();
 require 'database.php';
-$userId = $_GET['user'];
+$userId = $_GET['user'] ;
 $getAllPostSql = "SELECT * FROM posts WHERE id_user = $userId";
 $queryPost = $conn->query($getAllPostSql);
 $user_sql = "SELECT * FROM users WHERE id = $userId";
         $user_query = $conn->query($user_sql);
         $user_get = $user_query->fetch_assoc();
-$userSession = $_SESSION['id'];
+$userSession = $_SESSION['id'] ?? null;
 
 
 ?>
@@ -37,10 +37,16 @@ $userSession = $_SESSION['id'];
           <?php 
             $follow_sql_select = "SELECT * FROM follow WHERE user_id = $userSession AND follow_user_id = $userId  ";
             $query_follow = $conn->query($follow_sql_select);
-            $get_follow = $query_follow->fetch_assoc();
-            $isFollow = $get_follow['isfollowing']  ?? null;
+            
+            
 
           ?>
+          <?php if($userSession == null):?>
+            <div >theo dõi</div>
+          <?php else : $get_follow = $query_follow->fetch_assoc();
+          $isFollow = $get_follow['isfollowing']  ?? null;
+          ?>
+            
           <?php if($isFollow == null): ?>
             <div >theo dõi</div>
           <?php elseif($isFollow == 1): ?>
@@ -48,7 +54,7 @@ $userSession = $_SESSION['id'];
           <?php else : ?>
             theo dõi
             <?php endif ;?>
-
+            <?php endif;?>
         </button></div>
       </div>
      </div>
