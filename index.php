@@ -1,6 +1,7 @@
 <?php 
  session_start();
 require'database.php';
+ $keySearch = $_GET['search'] ?? null;
 ?>
 
 
@@ -25,6 +26,7 @@ require'database.php';
 
     <?php 
     require 'header.php';
+   
     ?>
 
 
@@ -63,7 +65,8 @@ require'database.php';
                 
              
              ?>
-            <!-- PHG END   -->
+            <?php if($keySearch == null): ?>
+           
          <?php while($post = $result->fetch_assoc()): ?>
             <?php 
                 $id_user = $post['id_user'];
@@ -100,6 +103,55 @@ require'database.php';
      </div>
          
         <?php endwhile ; ?>
+
+        <?php elseif($keySearch != null): 
+                $getSearchPost = "SELECT * FROM `posts` WHERE title LIKE '%$keySearch%';
+";
+                $queryGetSearchPost = $conn->query($getSearchPost);
+            ?>
+            <?php if($queryGetSearchPost->num_rows > 0) :?>
+            <!-- tiếp ở đây  -->
+             <?php while($getpostSearch = $queryGetSearchPost->fetch_assoc()):
+                 $id_user = $getpostSearch['id_user'];
+                $user = "SELECT username FROM `users` WHERE id = $id_user" ;
+                $result_user = $conn->query($user);
+                $user_get = $result_user->fetch_assoc();
+                ?>
+                 <div class = "body-post-popular-container">
+         <div class = "body-popular-post">
+            <div class="body-post" data-id = " <?= $getpostSearch['id']?>">
+                <div class="body-post-image" style="background-image: url('<?= $getpostSearch['post_image']?>')"></div>
+                <div class="post-container">
+                <div class="body-post-tilte"><?= $getpostSearch['title']?></div>
+                 <div class="body-post-tag"><?= $getpostSearch['tags']?></div>
+                 <div class="post-container-2">
+                     <div class="body-post-author">
+                      <img class="avatar-post-author" src="avatardefault_92824.png" alt="">
+                      <div class="post-date-name">
+                     <div class="username-post-author"><?=$user_get['username']?></div>
+                   <div class="post-date"><?= $getpostSearch['post_date']?></div>
+                            </div>
+                    </div>
+                  <div class="interact-items-post">
+                       <div class="body-post-views">số lượt xem: <?= $getpostSearch['views']?> |</div>
+                  <div class="body-post-likes">số lượt thích: <?= $getpostSearch['likes']?> |</div>
+                  <div class="body-post-comments">số lượt comment: <?= $getpostSearchpost['comments']?> |</div>
+                    </div>
+              </div>
+                </div>
+            </div>
+            </div>
+    
+     </div>
+     
+        <?php endwhile ; ?>
+      <?php else: ?>
+            <h1>không tìm thấy bài viết nào có kí tự '<?= $keySearch?> '</h1>
+                <?php endif; ?>
+
+                <?php endif; ?>
+               
+
 </div>
 
 
