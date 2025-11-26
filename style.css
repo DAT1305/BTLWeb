@@ -382,7 +382,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     border: 2px solid black;
-    width: 80%;
+    width: 40%;
     
 }
 a{
@@ -395,7 +395,8 @@ a{
 }
 .link-create-post{
     width: 50%;
-    
+    display: flex;
+    justify-content: flex-end;
 }
 .user-name-avata{
     display: flex;
@@ -419,3 +420,12 @@ a{
     width: 100px;
     height: 35px;
 }
+.text-moi-nhat h1{
+    font-weight: bold;
+
+}
+.nut{
+    display: flex;
+    justify-content: space-between;
+margin-top: 20px ;
+align-items: flex-end;}

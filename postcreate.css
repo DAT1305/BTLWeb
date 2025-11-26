@@ -51,8 +51,8 @@
 }
 .noi-dung-2 textarea{
     height: 30vh;
-    border: 2px solid black;
-    
+    border: none;
+    width: 100%;
     
 }
 .tieu-de-2 input {
@@ -82,4 +82,15 @@
     text-align: center;
     font-size: larger;
     font-weight: bold;
+}
+.boc-text{
+        border: 2px solid black;
+        width: 90%;
+        
+}
+.boc-ngoai-them{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }

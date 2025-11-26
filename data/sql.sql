@@ -47,3 +47,12 @@ FOREIGN KEY (user_id) REFERENCES users(id),
 FOREIGN KEY (follow_user_id) REFERENCES users(id)
     
 )
+CREATE TABLE IF NOT EXISTS groups (
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    groupname varchar(100) NOT NULL ,
+    title text NOT NULL ,
+    image varchar(50),
+    admin_id INT NOT NULL ,
+    FOREIGN KEY (admin_id) REFERENCES users(id)
+
+)

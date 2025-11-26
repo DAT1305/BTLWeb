@@ -15,6 +15,13 @@ require'database.php';
     <link rel="stylesheet" href="main.css">
 
 </head>
+<style>
+.link-create-post-2{
+     width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+</style>
 
     <?php 
     require 'header.php';
@@ -33,12 +40,14 @@ require'database.php';
                     
                  
             <div class="double-nut">
-                 <a class = "link-create-post" href="postcreate.php">   <div  class="body-create-post-button" ><h3>tạo bài viết</h3></div></a>
-                 <a class = "link-create-post" href="show.php">   <div  class="body-create-post-button" ><h3>xem tất cả </h3></div></a>
+                 <a  class = "link-create-post-2" href="postcreate.php">   <div  class="body-create-post-button" ><h3>tạo bài viết</h3></div></a>
+                
             </div>
                      
-                
-                
+            <div class="nut">
+                <div class="text-moi-nhat"><h3>bài viết mới nhất</h3></div>
+                <a class = "link-create-post" href="postall.php?show=all">   <div  class="body-create-post-button" ><h3>xem tất cả </h3></div></a> 
+            </div>
                
             
             
@@ -47,7 +56,7 @@ require'database.php';
             <!-- xử lí post tại đây  -->
              <!-- PHP START   -->
              <?php 
-                $getpost = 'SELECT * FROM `posts` LIMIT 4';
+                $getpost = 'SELECT * FROM `posts` ORDER BY id DESC LIMIT 4';
                 $result = $conn->query($getpost);
                 // lấy ra 
             
