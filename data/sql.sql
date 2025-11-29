@@ -10,11 +10,11 @@ CREATE TABLE IF NOT EXISTS posts(
     title varchar(200) NOT NULL,
 	post_image varchar(255),
     noi_dung TEXT ,
-    post_date DATETIME ,
-    views INT ,
-    likes INT ,
-    comments INT ,
-    tags varchar(255)
+    post_date DATETIME  DEFAULT CURRENT_TIMESTAMP,
+    views INT DEFAULT 0 ,
+    likes INT DEFAULT 0 ,
+    comments INT DEFAULT 0 ,
+    tags varchar(255),
     FOREIGN KEY (id_user) REFERENCES users(id)
 );
 
@@ -46,7 +46,7 @@ isfollowing INT ,
 FOREIGN KEY (user_id) REFERENCES users(id),
 FOREIGN KEY (follow_user_id) REFERENCES users(id)
     
-)
+);
 CREATE TABLE IF NOT EXISTS groups (
     id INT AUTO_INCREMENT PRIMARY KEY ,
     groupname varchar(100) NOT NULL ,
@@ -55,4 +55,8 @@ CREATE TABLE IF NOT EXISTS groups (
     admin_id INT NOT NULL ,
     FOREIGN KEY (admin_id) REFERENCES users(id)
 
+);
+ALTER TABLE users ADD (
+    is_banned INT DEFAULT 0 ,
+    is_admin INT DEFAULT 0
 )
