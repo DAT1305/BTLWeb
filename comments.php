@@ -17,7 +17,7 @@
     $userget = "SELECT * FROM `users` WHERE id = $user_id";
     $result_user = $conn->query($userget);
     $get_user = $result_user->fetch_assoc();  ?>
-    <div class = "container">>
+    <div class = "container">
         <div  class = "bentrong">
 
     <div class = "user-comment">

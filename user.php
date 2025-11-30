@@ -5,7 +5,9 @@
     
 ?>
 <table border="1" >
-            <tr>
+            <tr 
+             class="table-tab"
+            >
              <td>ID</td>
              <td>Tên người dùng</td>
              <td>trạng thái</td>
@@ -14,21 +16,42 @@
             
             
 <?php while($get_user = $result_user->fetch_assoc()): ?>
-       
+       <style>
+          .table-user th{
+            width: 200px;
+            height:50px ;
+            
+          }
+          .table-tab{
+            text-align: center;
+          }
+          .table-user th button {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .un-ban-button{
+            background-color: blue;
+          }
+
+       </style>
           
-                <tr>
+                <tr class="table-user">
                     <th><?= $get_user['id'] ?></th>
                     <th ><?= $get_user['username'] ?></th>
                     <?php if($get_user['is_banned']== 1) :?>
-                      <th>đã ban</th>
+                      <th  style="background-color: red; color: white;">đã ban</th>
                       <?php else : ?>
-                    <th>hoạt động</th>
+                    <th style="background-color: green; color: white;">hoạt động</th>
                     <?php endif;?>
                     <th>
                         <?php if($get_user['is_banned']== 1) :?>
                       <button class = "ban-button" onclick="ban()" data-id = "<?= $get_user['id'] ?>">mở khóa</button>
                       <?php else : ?>
-                    <button class = "ban-button" onclick="ban()" data-id = "<?= $get_user['id'] ?>">ban</button>
+                    <button style="background-color: blue;" class = "ban-button" onclick="ban()" data-id = "<?= $get_user['id'] ?>">ban</button>
                     <?php endif;?>
                       
                     </th>

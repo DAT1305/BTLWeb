@@ -25,9 +25,16 @@ $result = $conn->query($update_view);
     <title><?=$get_post['title']?></title>
     <link rel="stylesheet" href="post.css">
 </head>
+
 <body>
-    <div class = "container">
-    <div class = "bentrong">
+     
+    <div   class = "container">
+     <?php 
+
+          include ('leftmenu.php');
+        ?>   
+    <div class="boc-ben-trong">
+        <div class = "bentrong">
 
     <div class = "user"  data-user ="<?= $id_user?>">
         <div class="user-trong">
@@ -108,16 +115,21 @@ $result = $conn->query($update_view);
  </div>
         </div>
         
-</div>
-
-    </div>
-    <div class="comment-display-container">
+</div> 
+<div class="comment-display-container">
         <?php 
             require "comments.php"
         ?>
 
     </div>
+    </div>
+<!-- bentrong   -->
+ 
 
+    </div>
+     
+
+    
 
 
     <div class="comment-container">

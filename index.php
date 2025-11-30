@@ -32,6 +32,18 @@ require'database.php';
 
 <body>
     <div class = "container">
+        <!-- <div class = "body-mid-items">
+        <div class="items-menu-container">
+            
+
+
+
+
+                </div>
+        </div> -->
+        <?php 
+            include ('leftmenu.php')
+        ?>
         <div class = "body-left-items">
            
                 
@@ -58,7 +70,7 @@ require'database.php';
             <!-- xử lí post tại đây  -->
              <!-- PHP START   -->
              <?php 
-                $getpost = 'SELECT * FROM `posts` ORDER BY id DESC LIMIT 4';
+                $getpost = 'SELECT * FROM `posts` ORDER BY id DESC ';
                 $result = $conn->query($getpost);
                 // lấy ra 
             
@@ -157,9 +169,7 @@ require'database.php';
 
 
                 <!-- -->
-        <div class = "body-mid-items">
-        <div class="popular-tag">tag phổ biến nhất</div>
-        </div>
+        
         <div class = "body-right-items">
             faafafa
         </div>
