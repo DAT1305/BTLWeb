@@ -60,3 +60,6 @@ ALTER TABLE users ADD (
     is_banned INT DEFAULT 0 ,
     is_admin INT DEFAULT 0
 )
+ALTER TABLE groups ADD (
+ mem_count INT DEFAULT 0
+)
