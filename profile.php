@@ -21,11 +21,20 @@ $userSession = $_SESSION['id'] ?? null;
 
 <link rel="stylesheet" href="style.css">
 </head>
-<?php require 'header.php'; ?>
+<?php require 'header.php';
+
+?>
   
 
 <body>
-     <div class="user-container">
+ 
+     <div class="container-container">
+       <?php
+  include ('leftmenu.php'); 
+  ?>
+      <div class="container-profile-2">
+        <div class="user-container">
+      
       <div class="user-name-avata">
         <div class="user-avata-2"><img width="100px" src="avatardefault_92824.png" alt=""></div>
       <div class="user-name-profile">
@@ -92,6 +101,8 @@ $userSession = $_SESSION['id'] ?? null;
 
            
 <?php endwhile ; ?>
+      </div>
+     </div>
  <script src = "post.js"></script>
 
 </body>

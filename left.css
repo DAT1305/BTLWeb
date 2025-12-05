@@ -1,0 +1,63 @@
+.home-button a{
+    display: flex;
+   align-items: center;
+   margin-top: 10px;
+gap: 10px;
+
+}
+.create-button a{
+    display: flex;
+   align-items: center;
+   margin-top: 10px;
+gap: 10px;
+
+}
+.group-button a{
+    display: flex;
+   margin-top: 10px;
+   align-items: center;
+   margin-top: 10px;
+gap: 10px;
+
+
+}
+.group-button{
+    border-bottom: 2px solid black;
+}
+.container-left{
+}
+.head-return svg{
+    color: black;
+    
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+       
+
+}
+.head-calendar svg {
+    color: black;
+       
+
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+        
+
+
+}
+.head-group svg{
+        color: black;
+       
+
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    
+
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}

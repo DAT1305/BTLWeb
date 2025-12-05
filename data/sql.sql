@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS posts(
     views INT ,
     likes INT ,
     comments INT ,
-    tags varchar(255),
+    tags varchar(255)
     FOREIGN KEY (id_user) REFERENCES users(id)
 );
 
@@ -55,4 +55,4 @@ CREATE TABLE IF NOT EXISTS groups (
     admin_id INT NOT NULL ,
     FOREIGN KEY (admin_id) REFERENCES users(id)
 
-);
+)
