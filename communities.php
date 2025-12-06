@@ -12,6 +12,16 @@
     <title>communities</title>
 </head>
 <style>
+    .group-tao-button{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .group-tao-button button{
+            width: 150px;
+            height : 40px;
+            background-color: orange;
+            cursor: pointer;
+    }
     .image-group{
         width: 50px;
     }
@@ -25,9 +35,11 @@
     }
     .boc-ben-trong-group{
         display: flex;
+      
     }
     .title-group{
         font-size: 12px;
+        height: 10px;
     }
     .boc-abc-xyz{
         display: flex;
@@ -61,6 +73,9 @@
         width: 100%;
         text-align: left;
     }
+    .text-a h1 {
+        text-align : center;
+    }
 </style>
 <link rel="stylesheet" href="style.css">
 <?php
@@ -76,14 +91,17 @@
         </div>
     </div>
     <div class="show-group-container">
+         <div class="text-a"><h1>group phổ biến </h1></div>
         <div class="boc-ben-trong-group">
             <?php 
                 $sqlgroupGet = "SELECT * FROM groups ";
                 $queryGroupGet = $conn->query($sqlgroupGet);
                 $num =  1;
             ?>
+           
             <?php while($resultGroupGet = $queryGroupGet->fetch_assoc()): ?>
-                <button class = "group-button" onclick = "group_click()" data-id = "<?= $resultGroupGet['groupname'] ?>">
+
+                <button class = "group-button" onclick = "group_click()" data-id = "<?=$resultGroupGet['id']?>">
                  <div class="boc-abc-xyz">
                    
                         <div class="num"><?= $num ?></div>

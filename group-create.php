@@ -18,6 +18,60 @@
         
         display: flex;
     }
+    .ben-trong-create{
+        width: 100%;
+        background-color: #51dee8;
+        border: 2px solid black;
+        border-left: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .name-group{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+     .name-group input {
+        width: 400px;
+        height: 40px;
+     }
+      .tieu-de-group textarea {
+        width: 400px;
+        height: 200px;
+     }
+    .tieu-de-group {
+       margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .bg-group{
+        margin-top: 10px;
+         display: flex;
+        justify-content: center;
+    }
+
+
+    .button-g-c{
+        display: flex;
+        margin-top: 20px;
+
+        justify-content: center;
+    }
+    .form-create{
+        background-color: #bac5cd;
+        padding : 40px;
+        border: 2px solid black;
+        border-radius: 10px;
+
+    }
+    .button-g-c button{
+        width: 100px;
+height: 30px;
+background-color: orange;
+cursor: pointer;
+    }
 </style>
 <link rel="stylesheet" href="left.css">
 <body>
@@ -29,32 +83,15 @@
     ?>
         <div class="ben-trong-create">
             
-            <form action="gcreate.php" method="POST" enctype="multipart/form-data">
-               <div class="name-group"> tên group <input type="text" name = "namegroup"></div>
-                <div class="tieu-de-group">tiêu đề  <input name = "grouptitle"></div>
-                <div class="bg-group">ảnh <input type="file" name="image-group"></div>
-                <button type = "submit">tạo</button>
+            <form class = "form-create"action="gcreate.php" method="POST" enctype="multipart/form-data">
+             <div class="name-group"> <input placeholder = "nhập tên group"type="text" name = "namegroup"></div>
+                <div class="tieu-de-group"> <textarea placeholder = "nhập mô tả" name = "grouptitle" ></textarea></div>
+                <div class="bg-group"><input type="file" name="image-group"></div>
+               <div class ="button-g-c" > <button  type = "submit">tạo</button></div>
             </form>
         </div>
     </div>
 </body>
 </html>
-<?php
-    if($userid == null){
-        echo "bạn cần đăng nhập trước khi tạo";
-        header("location: login.html");
-    }
-    $nameGroup = isset($_POST['namegroup']) ? trim($_POST['namegroup']) : '';
-    $titleGroup = isset($_POST['grouptitle']) ? trim($_POST['grouptitle']) : '';
-    $target_dir = "upload/";
-    $target_file = $target_dir . basename($_FILES['image-group']['name']);
-    $upload = move_uploaded_file($_FILES["image-group"]["tmp_name"] , $target_file);
-    if(!$upload){
-        echo "<h1>upload thất bại</h1>";
-    }
-    $sqlgroup = "INSERT INTO `groups`(groupname, title , image , admin_id) VALUES ('$nameGroup' ,'$titleGroup' ,'$target_file' , $userid)";
-    $queGroup = $conn->query($sqlgroup);
-    if($queGroup){
-        echo "tạo group thành công";
-    }
-?>
+
+
